@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  relationship_type: 1
+  from_id: 1
+  to_id: 1
+
+two:
+  relationship_type: 1
+  from_id: 1
+  to_id: 1

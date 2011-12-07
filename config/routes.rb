@@ -1,4 +1,10 @@
 Lifeline::Application.routes.draw do
+  resources :events
+
+  resources :relationships
+
+  resources :relationship_types
+
   resources :timelines
 
   resources :users

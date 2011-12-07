@@ -11,7 +11,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111206061305) do
+ActiveRecord::Schema.define(:version => 20111207041227) do
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "relationship_types", :force => true do |t|
+    t.string   "name"
+    t.integer  "corresponding_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "relationships", :force => true do |t|
+    t.integer  "relationship_type"
+    t.integer  "from_id"
+    t.integer  "to_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "timelines", :force => true do |t|
     t.integer  "owner_id"
